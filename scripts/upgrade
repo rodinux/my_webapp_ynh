@@ -199,7 +199,7 @@ usermod -g "$app" "$app"
 ynh_script_progression --message="Configuring PHP-FPM..." --weight=5
 
 # Create a dedicated PHP-FPM config
-ynh_install_app_dependencies "$extra_php_dependencies"
+ynh_install_app_dependencies "$pkg_dependencies"
 ynh_add_fpm_config
 
 #=================================================
