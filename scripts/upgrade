@@ -193,13 +193,14 @@ usermod -g "$app" "$app"
 # PHP-FPM CONFIGURATION
 #=================================================
 
-if [ $phpversion != "none" ]
-then
-    ynh_script_progression --message="Upgrading PHP-FPM configuration..." --weight=2
+#=================================================
+# PHP-FPM CONFIGURATION
+#=================================================
+ynh_script_progression --message="Configuring PHP-FPM..." --weight=5
 
-    # Create a dedicated PHP-FPM config
-    ynh_add_fpm_config --usage=$fpm_usage --footprint=$fpm_footprint --phpversion=$phpversion
-fi
+# Create a dedicated PHP-FPM config
+ynh_install_app_dependencies "$extra_php_dependencies"
+ynh_add_fpm_config
 
 #=================================================
 # SPECIFIC UPGRADE
