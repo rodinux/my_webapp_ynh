@@ -44,8 +44,6 @@ then you should use this port to update your website with SFTP.
 
 ## Developers info
 
-WARNING: This fork is experimental only used for wordpress installed with my_webapp. 
-
 Please do your pull request to the [testing branch](https://github.com/YunoHost-Apps/my_webapp_ynh/tree/testing).
 
 To try the testing branch, please proceed like that.
