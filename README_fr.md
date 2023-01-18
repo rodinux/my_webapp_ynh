@@ -37,8 +37,6 @@ alors vous devriez utiliser ce port pour mettre à jour votre site Web avec SFTP
 
 ## Informations pour les développeurs
 
-ATTENTION: Ce fork est uniquement pour ajouter des configurations pour l'installation de wordpress avec my_webapp.
-
 Merci de faire vos pull request dans la [branche testing](https://github.com/YunoHost-Apps/my_webapp_ynh/tree/testing).
 
 Pour essayer la branche testing, procédez comme suit.
