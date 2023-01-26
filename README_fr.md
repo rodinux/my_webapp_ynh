@@ -37,13 +37,13 @@ alors vous devriez utiliser ce port pour mettre à jour votre site Web avec SFTP
 
 ## Informations pour les développeurs
 
-ATTENTION: Ce fork est uniquement pour ajouter des configurations pour l'installation de wordpress avec my_webapp.
+ATTENTION: Ce fork est uniquement pour ajouter des configurations pour l'installation d'un CMS wordpress avec my_webapp.
 
-Merci de faire vos pull request dans la [branche testing](https://github.com/YunoHost-Apps/my_webapp_ynh/tree/testing).
+Merci de faire vos pull request dans la [branche wordpress_testing](https://github.com/YunoHost-Apps/my_webapp_ynh/tree/testing).
 
-Pour essayer la branche testing, procédez comme suit.
+Pour essayer la branche wordpress_testing, procédez comme suit.
 ```
-sudo yunohost app install https://github.com/YunoHost-Apps/my_webapp_ynh/tree/testing --debug
+sudo yunohost app install https://github.com/rodinux/my_webapp_ynh/tree/wordpress_testing --debug
 ou
-sudo yunohost app upgrade my_webapp -u https://github.com/YunoHost-Apps/my_webapp_ynh/tree/testing --debug
+sudo yunohost app upgrade my_webapp -u https://github.com/rodinux/my_webapp_ynh/tree/wordpress_testing --debug
 ```
