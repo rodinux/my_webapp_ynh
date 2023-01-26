@@ -47,7 +47,7 @@ then you should use this port to update your website with SFTP.
 * Report a bug: <https://github.com/YunoHost-Apps/my_webapp_ynh/issues>
 
 
-WARNING: This fork is experimental and only used for wordpress installed with my_webapp. 
+**WARNING: This fork is experimental and only used for wordpress installed with my_webapp.** 
 
 ## Developer info
 
