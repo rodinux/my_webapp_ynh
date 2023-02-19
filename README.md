@@ -34,6 +34,7 @@ You may have change the SSH port as described in this section: [Modify the SSH p
 
 
 **WARNING: This fork is experimental and only used for wordpress installed with my_webapp.** 
+You may consider for example the line added in the `php-fpm.conf` file to take into account a Wordfence extension...
 
 ## Developer info
 
