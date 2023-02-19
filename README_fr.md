@@ -40,8 +40,8 @@ Vous avez peut-être changé le port SSH comme décrit dans cette section : [Mod
 
 ## Informations pour les développeurs
 
-
 **ATTENTION: Ce fork est experimental et uniquement pour ajouter des configurations pour l'installation d'un CMS wordpress avec my_webapp.**
+Prenez en considération par exemple l'ajout d'une ligne dans le fichier `php-fpm.conf` pour prendre en compte une extension Wordfence...
 
 Merci de faire vos pull request dans la [branche wordpress_spec](https://github.com/rodinux/my_webapp_ynh/tree/wordpress_spec).
 
