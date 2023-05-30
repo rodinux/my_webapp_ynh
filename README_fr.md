@@ -25,7 +25,6 @@ La version de PHP-FPM peut aussi être choisie, parmi `none`, `7.4`, `8.0`, `8.1
 **Une fois installé, rendez-vous sur l'URL choisie pour connaître l'utilisateur, le domaine et le port que vous devrez utiliser pour l'accès SFTP.** Le mot de passe est celui que vous avez choisi lors de l'installation. Sous le répertoire Web, vous verrez un dossier `www` qui contient les fichiers publics servis par cette application. Vous pouvez mettre tous les fichiers de votre application Web personnalisée à l'intérieur.
 
 
-**Version incluse :** 1.0~ynh14
 ## Documentations et ressources
 
 * Dépôt de code officiel de l’app : <https://github.com/YunoHost-Apps/my_webapp_ynh>
@@ -35,7 +34,8 @@ La version de PHP-FPM peut aussi être choisie, parmi `none`, `7.4`, `8.0`, `8.1
 ## Informations pour les développeurs
 
 **ATTENTION: Ce fork est experimental et uniquement pour ajouter des configurations pour l'installation d'un CMS wordpress avec my_webapp.**
-Prenez en considération par exemple l'ajout d'une ligne dans le fichier `php-fpm.conf` pour prendre en compte une extension Wordfence...
+
+Prenez en considération par exemple l'ajout d'une ligne dans le fichier `php-fpm.conf` pour prendre en compte une extension Wordfence et plusieurs valeurs pour php-fpm.
 
 Merci de faire vos pull request dans la [branche wordpress_spec](https://github.com/rodinux/my_webapp_ynh/tree/wordpress_spec).
 

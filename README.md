@@ -25,8 +25,6 @@ PHP-FPM version can also be selected among `none`, `7.4`, `8.0`, `8.1` and `8.2`
 **Once installed, go to the chosen URL to know the user, domain and port you will have to use for the SFTP access.** The password is one you chosen during the installation. Under the Web directory, you will see a `www` folder which contains the public files served by this app. You can put all the files of your custom Web application inside.
 
 
-<<<<<<< HEAD
-**Shipped version:** 1.0~ynh13
 ## Disclaimers / important information
 
 #### SFTP port
@@ -34,20 +32,22 @@ PHP-FPM version can also be selected among `none`, `7.4`, `8.0`, `8.1` and `8.2`
 You may have change the SSH port as described in this section: [Modify the SSH port](https://yunohost.org/en/security#modify-the-ssh-port); then you should use this port to update your website with SFTP.
 
 
-**WARNING: This fork is experimental and only used for wordpress installed with my_webapp.** 
-You may consider for example the line added in the `php-fpm.conf` file to take into account a Wordfence extension...
 
-## Developer info
-
-Please send your pull request to the [wordpress_spec branch](https://github.com/rodinux/my_webapp_ynh/tree/worpress_spec).
-=======
-**Shipped version:** 1.0~ynh14
->>>>>>> master
 ## Documentation and resources
 
 * Upstream app code repository: <https://github.com/YunoHost-Apps/my_webapp_ynh>
 * YunoHost documentation for this app: <https://yunohost.org/app_my_webapp>
 * Report a bug: <https://github.com/YunoHost-Apps/my_webapp_ynh/issues>
+
+## Developer info
+
+**WARNING: This fork is experimental and only used for wordpress installed with my_webapp.** 
+
+Please send your pull request to the [wordpress_spec branch](https://github.com/rodinux/my_webapp_ynh/tree/worpress_spec).
+
+You may consider for example the line added in the `php-fpm.conf` file to take into account a Wordfence extension and few values for php-fpm.
+
+Please do pull request on the [wordpress_spec branch](https://github.com/rodinux/my_webapp_ynh/tree/wordpress_spec).
 
 To try the wordpress_spec branch, please proceed like that.
 
