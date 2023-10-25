@@ -107,6 +107,15 @@ ynh_add_nginx_config
 ynh_add_config --template="example-custom-nginx-config.conf" --destination="$nginx_extra_conf_dir/sample.conf"
 
 #=================================================
+# SPECIFIC CRON TASK FOR WORDPRESS
+#=================================================
+ynh_script_progression --message="Configuring CRON task..." --weight=2
+
+ynh_add_config --template="../conf/cron" --destination="/etc/cron.d/$app"
+chown root: "/etc/cron.d/$app"
+chmod 644 "/etc/cron.d/$app"
+
+#=================================================
 # CREATE DEDICATED USER
 #=================================================
 ynh_script_progression --message="Making sure dedicated system user exists..." --weight=2
