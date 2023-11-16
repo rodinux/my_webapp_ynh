@@ -1,1 +1,2 @@
 0 3  *  *  * __APP__ /usr/bin/php__PHPVERSION__ __INSTALL_DIR__/www/wp-cron.php
+ 
