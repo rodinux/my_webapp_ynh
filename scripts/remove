@@ -48,7 +48,7 @@ ynh_remove_fpm_config
 
 #=================================================
 # REMOVE CRON TASK
-==================================================
+#==================================================
 ynh_script_progression --message="Removing CRON configuration..."
 
 # Remove a cron file
