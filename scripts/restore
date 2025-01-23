@@ -82,9 +82,27 @@ then
 fi
 
 #=================================================
+# REINSTALL DEPENDENCIES
+#=================================================
+ynh_script_progression "Reinstalling dependencies..."
+
+ynh_nodejs_install
+
+#=================================================
+# RESTORE NODEJS CONFIGURATIONS
+#=================================================
+ynh_script_progression "Restoring system configurations related to $app..."
+
+ynh_restore "/etc/systemd/system/$app.service"
+systemctl enable $app.service --quiet
+
+yunohost service add $app --description="My_webapp nodeJS" --log="/var/log/$app/$app.log"
+
+
+#=================================================
 # GENERIC FINALIZATION
 #=================================================
-# RELOAD NGINX AND PHP-FPM
+# RELOAD NGINX AND PHP-FPM AND NODEJS
 #=================================================
 ynh_script_progression --message="Reloading NGINX web server and PHP-FPM..."
 
@@ -92,6 +110,8 @@ if [ $phpversion != "none" ]
 then
 	ynh_systemd_action --service_name=php${phpversion}-fpm --action=reload
 fi
+
+ynh_systemctl --service=$app --action=start --log_path=systemd
 
 ynh_systemd_action --service_name=nginx --action=reload
 
