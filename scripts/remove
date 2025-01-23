@@ -47,6 +47,18 @@ ynh_script_progression --message="Removing PHP-FPM configuration..."
 ynh_remove_fpm_config
 
 #=================================================
+# REMOVE NODEJS CONFIGURATION
+#=================================================
+
+if ynh_hide_warnings yunohost service status $app >/dev/null; then
+	yunohost service remove $app
+fi
+
+ynh_config_remove_systemd
+
+ynh_nodejs_remove
+
+#=================================================
 # END OF SCRIPT
 #=================================================
 
