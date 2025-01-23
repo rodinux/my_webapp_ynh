@@ -149,6 +149,17 @@ then
 fi
 
 #=================================================
+# SETUP SYSTEMD
+#=================================================
+ynh_script_progression "Configuring $app's systemd service..."
+
+ynh_config_add_nginx
+
+ynh_config_add_systemd
+
+yunohost service add $app --description="My_webapp nodeJS service" --log="/var/log/$app/$app.log"
+
+#=================================================
 # END OF SCRIPT
 #=================================================
 
