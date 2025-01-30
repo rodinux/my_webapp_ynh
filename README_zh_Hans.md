@@ -48,7 +48,7 @@ To try the wordpress_spec branch, please proceed like that.
 
 
 ``` bash
-sudo yunohost app install https://github.com/rodinux/my_webapp_ynh/tree/worpress_spec --debug
+sudo yunohost app install https://github.com/rodinux/my_webapp_ynh/tree/wordpress_spec --debug
 or
 sudo yunohost app upgrade my_webapp -u https://github.com/rodinux/my_webapp_ynh/tree/wordpress_spec --debug
 ```
