@@ -5,37 +5,43 @@ It shall NOT be edited by hand.
 
 # My Webapp pour YunoHost
 
-[![Niveau d’intégration](https://dash.yunohost.org/integration/my_webapp.svg)](https://dash.yunohost.org/appci/app/my_webapp) ![Statut du fonctionnement](https://ci-apps.yunohost.org/ci/badges/my_webapp.status.svg) ![Statut de maintenance](https://ci-apps.yunohost.org/ci/badges/my_webapp.maintain.svg)
+[![Niveau d’intégration](https://apps.yunohost.org/badge/integration/my_webapp)](https://ci-apps.yunohost.org/ci/apps/my_webapp/)
+![Statut du fonctionnement](https://apps.yunohost.org/badge/state/my_webapp)
+![Statut de maintenance](https://apps.yunohost.org/badge/maintained/my_webapp)
 
 [![Installer My Webapp avec YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=my_webapp)
 
-*[Read this readme in english.](./README.md)*
+*[Lire le README dans d'autres langues.](./ALL_README.md)*
 
-> *Ce package vous permet d’installer My Webapp rapidement et simplement sur un serveur YunoHost.
-Si vous n’avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour savoir comment l’installer et en profiter.*
+> *Ce package vous permet d’installer My Webapp rapidement et simplement sur un serveur YunoHost.*  
+> *Si vous n’avez pas YunoHost, consultez [ce guide](https://yunohost.org/install) pour savoir comment l’installer et en profiter.*
 
 ## Vue d’ensemble
 
-Cette application vous permet d'installer facilement une application vide personnalisée, fourni un accès aux fichiers avec [SFTP](https://yunohost.org/fr/filezilla).
+Cette application vous permet d'installer facilement une application vide, dans laquelle vous pouvez déployer votre propre site web "statique" (HTML/CSS/JS) ou PHP.
 
-Elle peut également créer une base de données MySQL - qui sera sauvegardée et restaurée avec votre application. Les détails de connexion seront stockés dans le fichier `db_accesss.txt` situé dans le répertoire racine.
+Les fichiers être déposé [via SFTP](https://yunohost.org/fr/filezilla) ou toute autre méthode de votre choix.
 
-La version de PHP-FPM peut aussi être choisie, parmi `none`, `7.4`, `8.0`, `8.1` et `8.2`.
+Lors de l'installation, il est aussi possible d'initialiser une base de données MySQL ou PostgreSQL, qui sera sauvegardée et restaurée avec le reste de l'application. Les détails de connexion seront stockés dans le fichier `db_accesss.txt` situé dans le répertoire racine.
 
-**Une fois installé, rendez-vous sur l'URL choisie pour connaître l'utilisateur, le domaine et le port que vous devrez utiliser pour l'accès SFTP.** Le mot de passe est celui que vous avez choisi lors de l'installation. Sous le répertoire Web, vous verrez un dossier `www` qui contient les fichiers publics servis par cette application. Vous pouvez mettre tous les fichiers de votre application Web personnalisée à l'intérieur.
+La version de PHP-FPM peut aussi être choisie, parmi (aucune), `7.4`, `8.0`, `8.1`, `8.2`, `8.3` et `8.4`.
+
+**Une fois installée, rendez-vous sur l'URL choisie pour connaître l'utilisateur, le domaine et le port que vous devrez utiliser pour l'accès SFTP.** Le mot de passe est celui que vous avez choisi lors de l'installation. Sous le répertoire Web, vous verrez un dossier `www` qui contient les fichiers publics servis par cette application. Vous pouvez mettre tous les fichiers de votre application Web personnalisée à l'intérieur.
+
+L'application vous permet aussi de gérer - si vous activez l'option dans le panneau de configuration - la gestion des erreurs 404, il vous suffit de créer un dossier `error` dans le répertoire racine `www` et d'y placer vos fichiers d'erreur `html` 
 
 
+**Version incluse :** 1.0~ynh20
 ## Documentations et ressources
 
-* Dépôt de code officiel de l’app : <https://github.com/YunoHost-Apps/my_webapp_ynh>
-* Documentation YunoHost pour cette app : <https://yunohost.org/app_my_webapp>
-* Signaler un bug : <https://github.com/YunoHost-Apps/my_webapp_ynh/issues>
+- YunoHost Store : <https://apps.yunohost.org/app/my_webapp>
+- Signaler un bug : <https://github.com/YunoHost-Apps/my_webapp_ynh/issues>
 
 ## Informations pour les développeurs
 
 **ATTENTION: Ce fork est experimental et uniquement pour ajouter des configurations pour l'installation d'un CMS wordpress avec my_webapp.**
 
-Pour faire fonctionner wordpress, ajoutez une conf nginx avec les valeurs commentées dans "etc/nginx/conf.d/$domain.d/$app.d/sample.conf"
+Ce fork est our faire fonctionner wordpress, ajoutez une conf nginx avec les valeurs commentées dans "etc/nginx/conf.d/$domain.d/$app.d/sample.conf"
 
 Prenez en considération par exemple l'ajout d'une ligne dans le fichier `php-fpm.conf` pour prendre en compte une extension Wordfence et plusieurs valeurs pour php-fpm.
 
