@@ -41,7 +41,7 @@ L'application vous permet aussi de gérer - si vous activez l'option dans le pan
 
 **ATTENTION: Ce fork est experimental et uniquement pour ajouter des configurations pour l'installation d'un CMS wordpress avec my_webapp.**
 
-Ce fork est pour faire fonctionner wordpress, ajoutez une conf nginx avec les valeurs commentées dans "etc/nginx/conf.d/$domain.d/$app.d/sample.conf"
+Ce fork est our faire fonctionner wordpress, ajoutez une conf nginx avec les valeurs commentées dans "etc/nginx/conf.d/$domain.d/$app.d/sample.conf"
 
 Prenez en considération par exemple l'ajout d'une ligne dans le fichier `php-fpm.conf` pour prendre en compte une extension Wordfence et plusieurs valeurs pour php-fpm.
 
