@@ -36,7 +36,7 @@ PHP-FPM version can also be selected among `none`, `7.4`, `8.0`, `8.1` and `8.2`
 
 **WARNING: This fork is experimental and only used for wordpress installed with my_webapp.** 
 
-To work with wordpess add a file with a nginx conf with the paramters commented in the file "etc/nginx/conf.d/$domain.d/$app.d/sample.conf"
+This fork is to work with wordpess add a nginx.conf with the paramters commented in the file "etc/nginx/conf.d/$domain.d/$app.d/sample.conf".
 
 Please send your pull request to the [wordpress_spec branch](https://github.com/rodinux/my_webapp_ynh/tree/worpress_spec).
 
