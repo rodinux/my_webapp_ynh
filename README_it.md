@@ -25,7 +25,7 @@ PHP-FPM version can also be selected among `none`, `7.4`, `8.0`, `8.1` and `8.2`
 **Once installed, go to the chosen URL to know the user, domain and port you will have to use for the SFTP access.** The password is one you chosen during the installation. Under the Web directory, you will see a `www` folder which contains the public files served by this app. You can put all the files of your custom Web application inside.
 
 
-**Versione pubblicata:** 1.0~ynh15
+**Versione pubblicata:** 1.0~ynh20
 ## Documentazione e risorse
 
 - Repository upstream del codice dell’app: <https://github.com/YunoHost-Apps/my_webapp_ynh>
@@ -36,17 +36,15 @@ PHP-FPM version can also be selected among `none`, `7.4`, `8.0`, `8.1` and `8.2`
 
 **WARNING: This fork is experimental and only used for wordpress installed with my_webapp with a plugin wordfence.**
 
-This fork is to work with wordpess, add a my_wordpress.conf uncommenting the parameters commented in the file "etc/nginx/conf.d/$domain.d/$app.d/sample.conf".
+This fork is to work with wordpress, add a nginx configuration `/etc/nginx/conf.d/$domain.d/$app.d/my_wordpress.conf` with a copy of `sample.conf` and uncomment the parameters in this file.
 
 ```
-cp -a "etc/nginx/conf.d/$domain.d/$app.d/sample.conf" "etc/nginx/conf.d/$domain.d/$app.d/my_wordpress.conf"
+cp -a "/etc/nginx/conf.d/$domain.d/$app.d/sample.conf" "/etc/nginx/conf.d/$domain.d/$app.d/my_wordpress.conf"
 ```
 
-Please send your pull request to the [wordpress_spec_wordfence branch](https://github.com/rodinux/my_webapp_ynh/tree/worpress_spec_wordfence).
+You may consider for example the line added in the `php-fpm.conf` file to take into account a Wordfence extension and few values for `php-fpm`.
 
-You may consider for example the line added in the `php-fpm.conf` file to take into account a Wordfence extension and few values for php-fpm.
-
-Please do pull request on the [wordpress_spec_worfence branch](https://github.com/rodinux/my_webapp_ynh/tree/wordpress_spec).
+Please do pull request on the [wordpress_spec_worfence branch](https://github.com/rodinux/my_webapp_ynh/tree/wordpress_spec_wordfence).
 
 To try the wordpress_spec_wordfence branch, please proceed like that.
 

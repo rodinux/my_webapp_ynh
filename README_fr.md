@@ -39,21 +39,20 @@ L'application vous permet aussi de gérer - si vous activez l'option dans le pan
 
 ## Informations pour les développeurs
 
-**WARNING: This fork is experimental and only used for wordpress installed with my_webapp with a plugin wordfence.**
+**ATTENTION: Ce fork est experimental et uniquement pour ajouter des configurations pour l'installation d'un CMS wordpress avec my_webapp avec un plugin wordfence.**
 
-This fork is to work with wordpess, add a my_wordpress.conf uncommenting the parameters commented in the file "etc/nginx/conf.d/$domain.d/$app.d/sample.conf".
+Ce fork est pour faire fonctionner wordpress avec my_webapp, ajoutez un configuration nginx `/etc/nginx/conf.d/$domain.d/$app.d/my_wordpress.conf` et décommentez les valeurs dans ce fichier.
+
 
 ```
-cp -a "etc/nginx/conf.d/$domain.d/$app.d/sample.conf" "etc/nginx/conf.d/$domain.d/$app.d/my_wordpress.conf"
+cp -a "/etc/nginx/conf.d/$domain.d/$app.d/sample.conf" "/etc/nginx/conf.d/$domain.d/$app.d/my_wordpress.conf"
 ```
 
-Please send your pull request to the [wordpress_spec_wordfence branch](https://github.com/rodinux/my_webapp_ynh/tree/worpress_spec_wordfence).
+Prenez en considération la ligne ajoutée dans le fichier `php-fpm.conf` pour prendre en compte le plugin wordfence et d'autres valeurs ajoutées pour `php-fpm`.
 
-You may consider for example the line added in the `php-fpm.conf` file to take into account a Wordfence extension and few values for php-fpm.
+Merci de faire vos pull request dans la [branche wordpress_spec_wordfence](https://github.com/rodinux/my_webapp_ynh/tree/worpress_spec_wordfence).
 
-Please do pull request on the [wordpress_spec_worfence branch](https://github.com/rodinux/my_webapp_ynh/tree/wordpress_spec).
-
-To try the wordpress_spec_wordfence branch, please proceed like that.
+Pour essayer la branche wordpress_spec, procédez comme suit.
 
 ``` bash
 sudo yunohost app install https://github.com/rodinux/my_webapp_ynh/tree/worpress_spec_wordfence --debug
