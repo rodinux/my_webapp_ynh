@@ -34,23 +34,26 @@ PHP-FPM version can also be selected among `none`, `7.4`, `8.0`, `8.1` and `8.2`
 
 ## Informazioni per sviluppatori
 
-**WARNING: This fork is experimental and only used for wordpress installed with my_webapp.** 
+**WARNING: This fork is experimental and only used for wordpress installed with my_webapp with a plugin wordfence.**
 
-This fork is to work with wordpess add a nginx.conf with the paramters commented in the file "etc/nginx/conf.d/$domain.d/$app.d/sample.conf".
+This fork is to work with wordpess, add a my_wordpress.conf uncommenting the parameters commented in the file "etc/nginx/conf.d/$domain.d/$app.d/sample.conf".
 
-Please send your pull request to the [wordpress_spec branch](https://github.com/rodinux/my_webapp_ynh/tree/worpress_spec).
+```
+cp -a "etc/nginx/conf.d/$domain.d/$app.d/sample.conf" "etc/nginx/conf.d/$domain.d/$app.d/my_wordpress.conf"
+```
+
+Please send your pull request to the [wordpress_spec_wordfence branch](https://github.com/rodinux/my_webapp_ynh/tree/worpress_spec_wordfence).
 
 You may consider for example the line added in the `php-fpm.conf` file to take into account a Wordfence extension and few values for php-fpm.
 
-Please do pull request on the [wordpress_spec branch](https://github.com/rodinux/my_webapp_ynh/tree/wordpress_spec).
+Please do pull request on the [wordpress_spec_worfence branch](https://github.com/rodinux/my_webapp_ynh/tree/wordpress_spec).
 
-To try the wordpress_spec branch, please proceed like that.
-
+To try the wordpress_spec_wordfence branch, please proceed like that.
 
 ``` bash
-sudo yunohost app install https://github.com/rodinux/my_webapp_ynh/tree/worpress_spec --debug
+sudo yunohost app install https://github.com/rodinux/my_webapp_ynh/tree/worpress_spec_wordfence --debug
 or
-sudo yunohost app upgrade my_webapp -u https://github.com/rodinux/my_webapp_ynh/tree/wordpress_spec --debug
+sudo yunohost app upgrade my_webapp -u https://github.com/rodinux/my_webapp_ynh/tree/wordpress_spec_wordfence --debug
 ```
 
 **Maggiori informazioni riguardo il pacchetto di quest’app:** <https://yunohost.org/packaging_apps>

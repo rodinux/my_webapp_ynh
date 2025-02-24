@@ -39,20 +39,26 @@ L'application vous permet aussi de gérer - si vous activez l'option dans le pan
 
 ## Informations pour les développeurs
 
-**ATTENTION: Ce fork est experimental et uniquement pour ajouter des configurations pour l'installation d'un CMS wordpress avec my_webapp.**
+**WARNING: This fork is experimental and only used for wordpress installed with my_webapp with a plugin wordfence.**
 
-Ce fork est our faire fonctionner wordpress, ajoutez une conf nginx avec les valeurs commentées dans "etc/nginx/conf.d/$domain.d/$app.d/sample.conf"
+This fork is to work with wordpess, add a my_wordpress.conf uncommenting the parameters commented in the file "etc/nginx/conf.d/$domain.d/$app.d/sample.conf".
 
-Prenez en considération par exemple l'ajout d'une ligne dans le fichier `php-fpm.conf` pour prendre en compte une extension Wordfence et plusieurs valeurs pour php-fpm.
+```
+cp -a "etc/nginx/conf.d/$domain.d/$app.d/sample.conf" "etc/nginx/conf.d/$domain.d/$app.d/my_wordpress.conf"
+```
 
-Merci de faire vos pull request dans la [branche wordpress_spec](https://github.com/rodinux/my_webapp_ynh/tree/wordpress_spec).
+Please send your pull request to the [wordpress_spec_wordfence branch](https://github.com/rodinux/my_webapp_ynh/tree/worpress_spec_wordfence).
 
-Pour essayer la branche wordpress_spec, procédez comme suit.
+You may consider for example the line added in the `php-fpm.conf` file to take into account a Wordfence extension and few values for php-fpm.
+
+Please do pull request on the [wordpress_spec_worfence branch](https://github.com/rodinux/my_webapp_ynh/tree/wordpress_spec).
+
+To try the wordpress_spec_wordfence branch, please proceed like that.
 
 ``` bash
-sudo yunohost app install https://github.com/rodinux/my_webapp_ynh/tree/wordpress_spec --debug
-ou
-sudo yunohost app upgrade my_webapp -u https://github.com/rodinux/my_webapp_ynh/tree/wordpress_spec --debug
+sudo yunohost app install https://github.com/rodinux/my_webapp_ynh/tree/worpress_spec_wordfence --debug
+or
+sudo yunohost app upgrade my_webapp -u https://github.com/rodinux/my_webapp_ynh/tree/wordpress_spec_wordfence --debug
 ```
 
 **Plus d’infos sur le packaging d’applications :** <https://yunohost.org/packaging_apps>
