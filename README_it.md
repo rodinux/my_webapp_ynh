@@ -36,11 +36,13 @@ PHP-FPM version can also be selected among `none`, `7.4`, `8.0`, `8.1` and `8.2`
 
 **WARNING: This fork is experimental and only used for wordpress installed with my_webapp.** 
 
-This fork is to work with wordpess add a nginx.conf with the paramters commented in the file "etc/nginx/conf.d/$domain.d/$app.d/sample.conf".
+This fork is to work with wordpress, add a nginx configuration `/etc/nginx/conf.d/$domain.d/$app.d/my_wordpress.conf` with a copy of `sample.conf` and uncomment the parameters in this file.
 
-Please send your pull request to the [wordpress_spec branch](https://github.com/rodinux/my_webapp_ynh/tree/worpress_spec).
+```
+cp -a "/etc/nginx/conf.d/$domain.d/$app.d/sample.conf" "/etc/nginx/conf.d/$domain.d/$app.d/my_wordpress.conf"
+```
 
-You may consider for example the line added in the `php-fpm.conf` file to take into account a Wordfence extension and few values for php-fpm.
+You may consider for example the line added in the `php-fpm.conf` file to take into account a Wordfence extension and few values for `php-fpm`.
 
 Please do pull request on the [wordpress_spec branch](https://github.com/rodinux/my_webapp_ynh/tree/wordpress_spec).
 
