@@ -72,6 +72,17 @@ setfacl -m g:$app:r-x "$install_dir"
 setfacl -m g:www-data:r-x "$install_dir"
 chmod 750 "$install_dir"
 
+# Set file and directories ownership for wordpress
+mkdir -p $install_dir/www/wp-content/uploads
+mkdir -p $install_dir/www/wp-content/temp
+chown -R $app:www-data "$install_dir/www"
+find "$install_dir/www" -type d -exec chmod 750 {} \;
+find "$install_dir/www" -type f -exec chmod 640 {} \;
+find "$install_dir/www/wp-content/uploads" -type d -exec chmod 770 {} \;
+find "$install_dir/www/wp-content/temp" -type d -exec chmod 770 {} \;
+setfacl -Rm d:g:www-data:rwX "$install_dir/www/wp-content/uploads"
+setfacl -Rm d:g:www-data:rwX "$install_dir/www/wp-content/temp"
+
 #=================================================
 # RESTORE THE PHP-FPM CONFIGURATION
 #=================================================
