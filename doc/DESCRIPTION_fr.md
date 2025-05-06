@@ -12,6 +12,15 @@ L'application vous permet aussi de gérer - si vous activez l'option dans le pan
 
 **AVERTISSEMENT : Cette branche est expérimentale et utilisée uniquement pour wordpress installé avec my_webapp.** 
 
-## Info développeur
+## Informations pour les développeurs
 
-Veuillez envoyer votre demande de tirage à [wordpress_spec branch](https://github.com/rodinux/my_webapp_ynh/tree/worpress_spec).
+**ATTENTION: Ce fork est experimental et uniquement pour ajouter des configurations pour l'installation d'un CMS wordpress avec my_webapp avec un plugin wordfence.**
+
+Ce fork est pour faire fonctionner wordpress avec my_webapp, ajoutez un configuration nginx `/etc/nginx/conf.d/$domain.d/$app.d/my_wordpress.conf` et décommentez les valeurs dans ce fichier.
+
+
+```
+cp -a "/etc/nginx/conf.d/$domain.d/$app.d/sample.conf" "/etc/nginx/conf.d/$domain.d/$app.d/my_wordpress.conf"
+```
+
+Merci de faire vos pull request dans la [branche wordpress_spec_wordfence](https://github.com/rodinux/my_webapp_ynh/tree/worpress_spec_wordfence).

@@ -10,8 +10,14 @@ PHP-FPM version can also be selected among (none), `7.4`, `8.0`, `8.1`, `8.2`, `
 
 You can also customize 404 errors - if you enable the option in the config panel. Simply create an `error` folder in the `www` root directory, containing your custom `html` files. 
 
-**WARNING: This fork is experimental and only used for wordpress installed with my_webapp.** 
-
 ## Developer info
 
-Please send your pull request to the [wordpress_spec branch](https://github.com/rodinux/my_webapp_ynh/tree/worpress_spec).
+**WARNING: This fork is experimental and only used for wordpress installed with my_webapp with a plugin wordfence.**
+
+This fork is to work with wordpress, add a nginx configuration `/etc/nginx/conf.d/$domain.d/$app.d/my_wordpress.conf` with a copy of `sample.conf` and uncomment the parameters in this file.
+
+```
+cp -a "/etc/nginx/conf.d/$domain.d/$app.d/sample.conf" "/etc/nginx/conf.d/$domain.d/$app.d/my_wordpress.conf"
+```
+
+Please do pull request on the [wordpress_spec_worfence branch](https://github.com/rodinux/my_webapp_ynh/tree/wordpress_spec_wordfence).

@@ -38,24 +38,6 @@ if [ -z "${admin_mail_html:-}" ]; then
         ynh_app_setting_set --app=$app --key=admin_mail_html --value=$admin_mail_html
 fi
 
-# If fpm_footprint doesn't exist, create it
-if [ -z "${fpm_footprint:-}" ]; then
-    fpm_footprint=low
-    ynh_app_setting_set --app=$app --key=fpm_footprint --value=$fpm_footprint
-fi
-
-# If fpm_free_footprint doesn't exist, create it
-if [ -z "${fpm_free_footprint:-}" ]; then
-    fpm_free_footprint=0
-    ynh_app_setting_set --app=$app --key=fpm_free_footprint --value=$fpm_free_footprint
-fi
-
-# If fpm_usage doesn't exist, create it
-if [ -z "${fpm_usage:-}" ]; then
-    fpm_usage=low
-    ynh_app_setting_set --app=$app --key=fpm_usage --value=$fpm_usage
-fi
-
 # If with_sftp doesn't exist, create it
 if [ -z "${with_sftp:-}" ]; then
     with_sftp=1
@@ -160,7 +142,7 @@ then
     ynh_script_progression --message="Upgrading PHP-FPM configuration..." --weight=2
 
     # Create a dedicated PHP-FPM config
-    ynh_add_fpm_config --usage=$fpm_usage --footprint=$fpm_footprint --phpversion=$phpversion
+    ynh_add_fpm_config
 fi
 
 #=================================================
@@ -178,7 +160,6 @@ setfacl -m g:www-data:r-x "$install_dir"
 chmod 750 "$install_dir"
 
 # Set file and directories ownership for wordpress
-# Set file and directories ownership for wordpress
 mkdir -p $install_dir/www/wp-content/uploads
 mkdir -p $install_dir/www/wp-content/temp
 chown -R $app:www-data "$install_dir/www"
@@ -188,7 +169,6 @@ find "$install_dir/www/wp-content/uploads" -type d -exec chmod 770 {} \;
 find "$install_dir/www/wp-content/temp" -type d -exec chmod 770 {} \;
 setfacl -Rm d:g:www-data:rwX "$install_dir/www/wp-content/uploads"
 setfacl -Rm d:g:www-data:rwX "$install_dir/www/wp-content/temp"
-
 
 #=================================================
 # DEACTIVE MAINTENANCE MODE
