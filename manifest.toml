@@ -77,6 +77,7 @@ ram.runtime = "50M"
 
     [resources.apt]
     packages = "nginx, php${phpversion}-curl, php${phpversion}-mysql, php${phpversion}-mbstring, php${phpversion}-xml, php${phpversion}-zip, php${phpversion}-gd, php${phpversion}-soap, php${phpversion}-ssh2, php${phpversion}-tokenizer, php${phpversion}-intl"
+    packages_from_raw_bash = """
         if [[ "$database" == "mysql" ]]; then
             echo "mariadb-server"
 
