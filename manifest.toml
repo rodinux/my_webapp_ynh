@@ -76,8 +76,7 @@ ram.runtime = "50M"
     main.url = "/"
 
     [resources.apt]
-    packages = "nginx"  # Kind of "dummy" value to be sure to have a non-empty dep list
-    packages_from_raw_bash = """
+    packages = "nginx, php${phpversion}-curl, php${phpversion}-mysql, php${phpversion}-mbstring, php${phpversion}-xml, php${phpversion}-zip, php${phpversion}-gd, php${phpversion}-soap, php${phpversion}-ssh2, php${phpversion}-tokenizer, php${phpversion}-intl"
         if [[ "$database" == "mysql" ]]; then
             echo "mariadb-server"
 
