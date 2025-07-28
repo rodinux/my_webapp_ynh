@@ -16,11 +16,12 @@ L'application vous permet aussi de gérer - si vous activez l'option dans le pan
 
 **ATTENTION: Ce fork est experimental et uniquement pour ajouter des configurations pour l'installation d'un CMS wordpress avec my_webapp avec un plugin wordfence.**
 
-Ce fork est pour faire fonctionner wordpress avec my_webapp, ajoutez un configuration nginx `/etc/nginx/conf.d/$domain.d/$app.d/my_wordpress.conf` et décommentez les valeurs dans ce fichier.
+Ce fork est pour faire fonctionner wordpress avec my_webapp, ajoutez un configuration nginx `/etc/nginx/conf.d/__DOMAIN__.d/$app.d/my_wordpress.conf` et décommentez les valeurs dans ce fichier.
 
 
 ```
-cp -a "/etc/nginx/conf.d/$domain.d/$app.d/sample.conf" "/etc/nginx/conf.d/$domain.d/$app.d/my_wordpress.conf"
+cp -a "/etc/nginx/conf.d/$domain.d/__DOMAIN__.d/sample.conf" "/etc/nginx/conf.d/__DOMAIN__.d/$app.d/my_wordpress.conf"
+chmod 640 "/etc/nginx/conf.d/__DOMAIN__.d/$app.d/my_wordpress.conf"
 ```
 
 Prenez en considération la ligne ajoutée dans le fichier `php-fpm.conf` pour prendre en compte le plugin wordfence et d'autres valeurs ajoutées pour `php-fpm`.

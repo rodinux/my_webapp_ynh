@@ -17,7 +17,8 @@ You can also customize 404 errors - if you enable the option in the config panel
 This fork is to work with wordpress, add a nginx configuration `/etc/nginx/conf.d/$domain.d/$app.d/my_wordpress.conf` with a copy of `sample.conf` and uncomment the parameters in this file.
 
 ```
-cp -a "/etc/nginx/conf.d/$domain.d/$app.d/sample.conf" "/etc/nginx/conf.d/$domain.d/$app.d/my_wordpress.conf"
+cp -a "/etc/nginx/conf.d/$domain.d/__DOMAIN__.d/sample.conf" "/etc/nginx/conf.d/__DOMAIN__.d/$app.d/my_wordpress.conf"
+chmod 640 "/etc/nginx/conf.d/__DOMAIN__.d/$app.d/my_wordpress.conf"
 ```
 
 You may consider for example the line added in the `php-fpm.conf` file to take into account a Wordfence extension and few values for `php-fpm`.
